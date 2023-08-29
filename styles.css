@@ -1,0 +1,321 @@
+.navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #526D82;
+    border-bottom: 0.1em solid white;
+    
+}
+
+.navitem {
+    float: right;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    text-underline-offset: 0.3em;
+    position: relative;
+    transition: background-color 300ms linear, text-decoration-color 300ms linear;
+    
+}
+.navitem:hover {
+    background-color: #476175;
+    text-decoration-color: rgba(255, 255, 255, 1);
+
+}
+
+.navitem a {
+    font-family: 'Source Code Pro', monospace;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+
+.content {
+    background-color: #495f71;
+    background-color: #5b809c;
+    margin: 0em;
+    margin-top: -0.1em;
+    padding-left: 2em;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    font-family: 'Source Code Pro', monospace;
+    text-decoration: none;
+    color: white;
+    
+}
+.main-title {
+    padding: 0em;
+    margin: 0em;
+    
+    font-weight: 200;
+    font-size: 5em;
+}
+.sub-title {
+    padding: 0em;
+    margin: 0em;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #b0cbe0;
+}
+
+body {
+    margin:0em;
+    background-color: #27374D;
+}
+
+.active-tab{
+    text-decoration: underline;
+    color: #9DB2BF;
+}
+
+.home-banner-curve-bottom {
+    margin-top: -0.1em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    position:relative;
+    z-index: 1;
+}
+
+.home-banner-curve-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 81px;
+}
+
+.home-banner-curve-bottom .shape-fill {
+    fill: #5B809C;
+}
+
+
+
+.home-banner-curve-bottom-border {
+    margin-top: -4em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    position:relative;
+    z-index: -1;
+}
+
+.home-banner-curve-bottom-border svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 81px;
+}
+
+.home-banner-curve-bottom-border .shape-fill {
+    fill: #43647d;
+}
+
+
+
+.home-banner-curve-top {
+    margin-top: 0em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+.home-banner-curve-top svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 81px;
+}
+
+.home-banner-curve-top .shape-fill {
+    fill: #5B809C;
+}
+
+
+
+.home-banner-curve-top-border {
+    margin-top: 8em;
+    margin-bottom: -4em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+.home-banner-curve-top-border svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 81px;
+}
+
+.home-banner-curve-top-border .shape-fill {
+    fill: #43647d;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0em;
+   
+    margin:0.5em;
+    margin-left: 1em;
+    height:2em;
+    width:2em;
+    border-color: white;
+    border: 0.1em solid white;
+    border-radius: 0.5em;
+    transition: border-color 300ms linear;
+}
+
+.logo:hover {
+    border-color: aqua;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+.grid-container {
+    margin-top: 2em;
+    margin-bottom:0em;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 25em 5em;
+    grid-template-rows: 5em 5em 5em 5em;
+    column-gap: 1em;
+    row-gap: 1em;
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+.grid-info {
+    
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	color: white;
+    background-color: #5b809c;
+    border: 4px solid #9DB2BF;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1em;
+}
+
+.grid-icon {
+    
+	color: white;
+    background-color: #5b809c;
+    border: 4px solid #9DB2BF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: color 300ms linear;
+}
+
+.grid-icon:hover {
+    color:#9DB2BF;
+}
+
+.page-title {
+    width: fit-content;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    color: white;
+    margin: 0em;
+    background-color: #43647d;
+    border: 0.05em solid white;
+    border-radius: 0.2em;
+    
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1em;
+}
+
+.active-tab {
+    background-color: #476175;
+}
+
+
+.card-container {
+    margin-top: 2em;
+    margin-bottom:0em;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 25em 25em 25em;
+    grid-template-rows: 25em;
+    column-gap: 1em;
+    row-gap: 1em;
+    font-family: 'Source Code Pro', monospace;
+    
+    
+}
+
+.card {
+    
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+	
+    
+	color: white;
+    background-color: #5b809c;
+    border: 4px solid #9DB2BF;
+    border-radius: 10px;
+    text-align: left;
+    padding: 1em;
+    padding-top: 0.7em;
+    z-index: 10;
+}
+
+
+
+.card-title {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+.card-desc {
+    font-family: 'Source Code Pro', monospace;
+    font-size: .7em;
+    color: white;
+}
+
+.card-img {
+    width: 6em;
+    height: 6em;
+    filter: drop-shadow(0em 0em 0.5em black);
+    border-radius: 1em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    transition: transform 0.5s;
+}
+
+.card-img:hover { 
+    transform: scale(0.95); 
+}
