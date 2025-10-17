@@ -319,3 +319,38 @@ img {
 .card-img:hover { 
     transform: scale(0.95); 
 }
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+.resume-frame {
+    width: 80%;
+    height: 80vh;
+    border: 2px solid #222;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.resume-download {
+    margin-top: 1em;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.1em;
+}
+
+.resume-download a {
+    color: #0078ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-download a:hover {
+    text-decoration: underline;
+}
+
+
