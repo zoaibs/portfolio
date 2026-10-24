@@ -1,109 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <script src="https://kit.fontawesome.com/8f8ea09837.js" crossorigin="anonymous"></script>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600;900&display=swap" rel="stylesheet">
-    </head>
-    
-    <body>
-        <!-- NAVBAR -->
-        <div class="navbar">
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dynamic KV Cache Scheduler and planned Memoir AI and JAX/XLA optimization projects by Zoaib Sihorwala.">
+    <title>Projects | Zoaib Sihorwala</title>
+    <link rel="icon" href="assets/portfolio-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="page-transitions.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="brand" aria-label="Zoaib Sihorwala home"><img src="assets/portfolio-logo.png" class="logo" alt="Zoaib's logo" width="38" height="38"></a>
             <ul class="navlist">
-                <a href="index.html"><img src="assets/portfolio-logo.png" class="logo"></a>
-
-                <li class="navitem"><a href="contact.html">.contact()</a></li>
-                <li class="navitem"><a href="resume.html">.resume()</a></li>
-                <li class="navitem" style="text-decoration: none;"><a  class="active-tab" href="projects.html">.projects()</a></li>
-                <li class="navitem"><a href="about.html">.about()</a></li>
-                <li class="navitem"><a href="index.html">.home()</a></li>
-                
-                
-                
-                
+                <li class="navitem"><a href="index.html" aria-label="Home">.home()</a></li>
+                <li class="navitem"><a href="about.html" aria-label="About">.about()</a></li>
+                <li class="navitem"><a href="experience.html" aria-label="Work Experience">.experience()</a></li>
+                <li class="navitem"><a href="projects.html" aria-label="Projects" class="active-tab" aria-current="page">.projects()</a></li>
+                <li class="navitem"><a href="resume.html" aria-label="Resume">.resume()</a></li>
+                <li class="navitem"><a href="contact.html" aria-label="Contact">.contact()</a></li>
             </ul>
         </div>
-        
-        
-        
-        <div class="home-banner-curve-bottom">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="home-banner-curve-bottom-border">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="title-container">
-            <h1 class="page-title" style="margin:0em;">
-                Projects
-            </h1>
-        </div>
-        
-        
-        <div class="card-container">
-            
-            <div class="card">
-                <div class="card-title">
-                    AQINet
-                </div>
-                <div>
-                    <a href="assets/AQINet_Paper.pdf"><img src="assets/aqinet-img.png" class="card-img"></a>
-                </div>
-                <div class="card-desc">
-                    A novel deep learning model built off ResNet-50 to classify air quality index from satellite imagery and meteorological data. Achieved SOTA classification accuracy of 77%.
-                </div>
+    </nav>
+    <main id="main">
+        <svg class="wave wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
+        <div class="page-shell"><header class="page-heading"><h1 class="page-title">Projects</h1><p class="page-intro">Exploring efficient AI systems, visual memory, and model optimization.</p></header>
+            <div class="card-container">
+                <article class="card" aria-labelledby="kv-title"><span class="status">In progress</span><div class="project-visual" aria-hidden="true"><span>KV [8 &rarr; 4 &rarr; 2]</span><small>adaptive cache precision</small></div><h2 class="card-title" id="kv-title">Dynamic KV Cache Scheduler</h2><p class="card-desc">A hybrid dynamic quantization framework for transformer-based video models. It adjusts KV cache precision based on scene complexity and motion, using an OpenCV-powered information score to schedule precision in real time.</p><p class="card-desc">Rotation-based outlier mitigation and sink-token preservation help stabilize low-bit inference.</p><p class="project-metric">32% less KV cache memory, within 1.2% of full-precision accuracy. 14% higher throughput and 18% lower VRAM use versus uniform baselines.</p><ul class="tags" aria-label="Technologies"><li>PyTorch</li><li>OpenCV</li><li>Vision Transformers</li></ul><span class="placeholder-link" role="link" aria-disabled="true">Repository &middot; coming soon</span></article>
+                <article class="card" aria-labelledby="memoir-title"><span class="status status-planned">Planned project</span><div class="project-visual" aria-hidden="true"><span>photos &rarr; memories</span><small>search in your own words</small></div><h2 class="card-title" id="memoir-title">Memoir AI</h2><p class="card-desc">A planned semantic photo search tool to help find memories using natural-language descriptions, rather than filenames or manual tags.</p><p class="card-desc">The idea is to pair CLIP image embeddings with a vector database and a LangChain query pipeline, connecting the way we describe a memory to the images in a personal collection.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>LangChain</li><li>CLIP</li><li>Vector Search</li></ul><span class="placeholder-link" role="link" aria-disabled="true">Repository &middot; coming soon</span></article>
+                <article class="card" aria-labelledby="jax-title"><span class="status status-planned">Planned project</span><div class="project-visual" aria-hidden="true"><span>JAX &rarr; XLA</span><small>profile / compile / optimize</small></div><h2 class="card-title" id="jax-title">JAX / XLA Optimization</h2><p class="card-desc">A planned exploration of how compiler-level choices affect machine learning workloads, from a first JAX implementation to a profiled and optimized version.</p><p class="card-desc">Areas to investigate include JIT compilation, vectorization, operation fusion, and memory use, with reproducible benchmarks to compare performance and numerical accuracy.</p><ul class="tags" aria-label="Technologies"><li>Python</li><li>JAX</li><li>XLA</li><li>Profiling</li></ul><span class="placeholder-link" role="link" aria-disabled="true">Repository &middot; coming soon</span></article>
             </div>
-
-            <div class="card">
-                <div class="card-title">
-                    Project Dino
-                </div>
-                <div>
-                    <a href="https://zoaib.itch.io/project-dino"><img src="assets/project-dino-img.png" class="card-img"></a>
-                </div>
-                <div class="card-desc">
-                    A 2D pixel platformer where an archaeologist must explore and recover stolen fossils for the city museum. Built with Unity.
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">
-                    zoaib.dev
-                </div>
-                <div>
-                    <a href=index.html><img src="assets/portfolio-logo.png" class="card-img"></a>
-                </div>
-                <div class="card-desc">
-                    A portfolio website made with raw HTML and CSS to show off my projects and skills.
-                </div>
-            </div>
-
-            
-
-            
-
         </div>
-        
-        <div class="home-banner-curve-top-border" style="position: absolute; bottom:1em; margin:0;">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="home-banner-curve-top" style="position: absolute; bottom:0em;">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        
-    </body>
+    </main>
+    <footer class="site-footer">
+        <svg class="wave " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
+        <div class="footer-content"><p>Zoaib Sihorwala &middot; <a href="mailto:zoaibsihorwala@gmail.com">Let's connect</a></p></div>
+    </footer>
+</body>
 </html>
-

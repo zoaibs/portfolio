@@ -1,85 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <script src="https://kit.fontawesome.com/8f8ea09837.js" crossorigin="anonymous"></script>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600;900&display=swap" rel="stylesheet">
-    </head>
-    
-    <body>
-        <!-- NAVBAR -->
-        <div class="navbar">
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download or read Zoaib Sihorwala's Computer Science B.S./M.S. resume.">
+    <title>Resume | Zoaib Sihorwala</title>
+    <link rel="icon" href="assets/portfolio-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="page-transitions.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="brand" aria-label="Zoaib Sihorwala home"><img src="assets/portfolio-logo.png" class="logo" alt="Zoaib's logo" width="38" height="38"></a>
             <ul class="navlist">
-                <a href="index.html"><img src="assets/portfolio-logo.png" class="logo"></a>
-
-                <li class="navitem"><a href="contact.html">.contact()</a></li>
-                <li class="navitem" style="text-decoration: none;"><a   class="active-tab" href="resume.html">.resume()</a></li>
-                <li class="navitem"><a href="projects.html">.projects()</a></li>
-                <li class="navitem"><a href="about.html">.about()</a></li>
-                <li class="navitem"><a href="index.html">.home()</a></li>
-                
-                
-                
-                
+                <li class="navitem"><a href="index.html" aria-label="Home">.home()</a></li>
+                <li class="navitem"><a href="about.html" aria-label="About">.about()</a></li>
+                <li class="navitem"><a href="experience.html" aria-label="Work Experience">.experience()</a></li>
+                <li class="navitem"><a href="projects.html" aria-label="Projects">.projects()</a></li>
+                <li class="navitem"><a href="resume.html" aria-label="Resume" class="active-tab" aria-current="page">.resume()</a></li>
+                <li class="navitem"><a href="contact.html" aria-label="Contact">.contact()</a></li>
             </ul>
         </div>
-        
-        
-        
-        <div class="home-banner-curve-bottom">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="home-banner-curve-bottom-border">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="title-container">
-            <h1 class="page-title" style="margin:0em;">
-                Resume
-            </h1>
-        </div>
-        <div class="resume-container">
-            <iframe 
-                src="assets/Zoaib_Sihorwala_Resume_2027.pdf" 
-                class="resume-frame" 
-                title="Zoaib Sihorwala Resume">
-            </iframe>
-        
-            <p class="resume-download">
-                <i class="fa-solid fa-file-pdf"></i> 
-                <a href="assets/Zoaib_Sihorwala_Resume_2027.pdf" download>
-                    Download Resume (PDF)
-                </a>
-            </p>
-        </div>
-        
-        
-            
-        
-        <!-- <div class="home-banner-curve-top-border" style="position: absolute; bottom:1em; margin:0;">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-
-        <div class="home-banner-curve-top" style="position: absolute; bottom:0em;">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div> -->
-        
-    </body>
+    </nav>
+    <main id="main">
+        <svg class="wave wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
+        <div class="page-shell"><header class="page-heading"><h1 class="page-title">Resume</h1><p class="page-intro">Education, experience, and technical skills.</p></header><div class="resume-container"><p class="resume-download"><a class="button" href="assets/Zoaib_Sihorwala_Resume_BSMS.pdf" download>Download resume (PDF) &darr;</a></p><iframe src="assets/Zoaib_Sihorwala_Resume_BSMS.pdf" class="resume-frame" title="Zoaib Sihorwala resume"><p><a href="assets/Zoaib_Sihorwala_Resume_BSMS.pdf">Open the resume PDF</a></p></iframe></div></div>
+    </main>
+    <footer class="site-footer">
+        <svg class="wave " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
+        <div class="footer-content"><p>Zoaib Sihorwala &middot; <a href="mailto:zoaibsihorwala@gmail.com">Let's connect</a></p></div>
+    </footer>
+</body>
 </html>
-
-
-
-
-
