@@ -8,11 +8,12 @@
     <link rel="icon" href="assets/portfolio-logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script src="page-transitions.js" defer></script>
+    <script src="terminal.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;900&amp;display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <nav class="navbar" aria-label="Main navigation">
         <div class="nav-inner">
@@ -36,7 +37,17 @@
             <div class="actions"><a class="button" href="experience.html">Explore my experience &rarr;</a><a class="button" href="projects.html">View projects &rarr;</a></div>
         </section>
         <svg class="wave wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
-        <section class="home-details" aria-labelledby="recent-work"><h2 id="recent-work">From research to production.</h2><p>Cloud infrastructure at AWS. Causal inference at Credit Karma. Computer vision research at Michigan State. I enjoy working across the stack, with a growing focus on making machine learning systems more efficient.</p><a href="about.html">A little more about me &rarr;</a></section>
+        <section class="home-terminal" aria-label="Portfolio welcome">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="terminal-title">zoaib@portfolio:~</span>
+                    <button class="terminal-toggle" type="button" aria-label="Pause terminal animation" hidden>pause</button>
+                </div>
+                <p class="terminal-line" aria-hidden="true"><span class="terminal-prompt">$</span><span id="terminal-output">Welcome to my portfolio.</span><span class="terminal-cursor"></span></p>
+                <p class="sr-only">Welcome to my portfolio. Take a look at my projects or experience. Download my resume in the Resume tab. Enjoy your stay.</p>
+            </div>
+        </section>
     </main>
     <footer class="site-footer">
         <svg class="wave " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path></svg>
