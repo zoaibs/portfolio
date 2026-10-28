@@ -25,6 +25,12 @@ h1, h2, h3 { line-height: 1.3; }
 .navlist { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .2rem; padding: 0; margin: 0; list-style: none; }
 .navitem a { display: block; padding: 1rem .8rem; color: #fff; text-decoration: none; font-size: .95rem; }
 .navitem a:hover, .navitem .active-tab { background: #3d586e; text-decoration: underline; text-decoration-color: var(--accent); }
+.navlist.has-indicator { position: relative; isolation: isolate; }
+.navlist.has-indicator::before { content: ''; position: absolute; top: 0; left: 0; width: var(--nav-width); height: var(--nav-height); transform: translate(var(--nav-x), var(--nav-y)); background: #3d586e; border-bottom: 2px solid var(--accent); pointer-events: none; z-index: -1; }
+.navlist.indicator-moving::before { transition: transform 240ms cubic-bezier(.22, 1, .36, 1), width 240ms cubic-bezier(.22, 1, .36, 1), height 240ms ease; }
+.navlist.has-indicator .active-tab { background: transparent; text-decoration: none; }
+.navlist.has-indicator a { transition: background-color 180ms ease, color 180ms ease; }
+.navlist.has-indicator a:hover { background: #3d586e55; text-decoration: none; }
 main { flex: 1; }
 .wave { display: block; width: 100%; height: 72px; fill: var(--blue); }
 .wave-top { transform: rotate(180deg); }
@@ -58,6 +64,7 @@ main { flex: 1; }
 @keyframes terminal-blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
     .terminal.is-animated .terminal-cursor { animation: none; }
+    .navlist.indicator-moving::before, .navlist.has-indicator a { transition: none; }
 }
 .home-page .hero { padding-block: clamp(1.5rem, 4svh, 3rem); }
 .home-page .main-title { font-size: clamp(2.5rem, min(7vw, 10svh), 5.5rem); }

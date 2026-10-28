@@ -4,11 +4,33 @@
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const storageKey = 'portfolio-page-transition';
 
-    if (!main || !navbar || typeof main.animate !== 'function') return;
+    if (!main || !navbar) return;
 
-    const pages = [...document.querySelectorAll('.navlist a')]
-        .map(link => new URL(link.href).pathname);
+    const navlist = navbar.querySelector('.navlist');
+    const links = [...navbar.querySelectorAll('.navlist a')];
+    const activeLink = links.find(link => link.hasAttribute('aria-current'));
+    const pages = links.map(link => new URL(link.href).pathname);
+    let highlightedLink = activeLink;
     let leaving = false;
+
+    function positionIndicator(link, animate = false) {
+        if (!navlist || !link) return;
+        highlightedLink = link;
+        const listBounds = navlist.getBoundingClientRect();
+        const linkBounds = link.getBoundingClientRect();
+        navlist.classList.toggle('indicator-moving', animate && !reducedMotion.matches);
+        navlist.style.setProperty('--nav-x', `${linkBounds.left - listBounds.left}px`);
+        navlist.style.setProperty('--nav-y', `${linkBounds.top - listBounds.top}px`);
+        navlist.style.setProperty('--nav-width', `${linkBounds.width}px`);
+        navlist.style.setProperty('--nav-height', `${linkBounds.height}px`);
+        navlist.classList.add('has-indicator');
+    }
+
+    positionIndicator(activeLink);
+    window.addEventListener('resize', () => positionIndicator(highlightedLink));
+    document.fonts?.ready.then(() => positionIndicator(highlightedLink));
+
+    if (typeof main.animate !== 'function') return;
 
     // Only animate arrivals that follow one of our navbar clicks.
     try {
@@ -44,6 +66,7 @@
         event.preventDefault();
         if (leaving) return;
         leaving = true;
+        positionIndicator(links.find(item => item.pathname === destination.pathname), true);
 
         const direction = pages.indexOf(destination.pathname) >=
             pages.indexOf(location.pathname) ? 1 : -1;
@@ -53,7 +76,7 @@
             { opacity: 1, transform: 'translateX(0)' },
             { opacity: 0, transform: `translateX(${direction * -24}px)` }
         ], {
-            duration: 160,
+            duration: 240,
             easing: 'ease-in',
             fill: 'forwards'
         });
@@ -78,6 +101,7 @@
     window.addEventListener('pageshow', event => {
         if (!event.persisted) return;
         main.getAnimations().forEach(animation => animation.cancel());
+        positionIndicator(activeLink);
         leaving = false;
     });
 })();
